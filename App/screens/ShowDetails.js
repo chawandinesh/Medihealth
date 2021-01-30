@@ -92,16 +92,25 @@ export function ShowDetails({navigation, route}) {
               }}>
               {item.type}
             </Text>
+            <View style={{marginTop: height * 0.05, alignItems:'center'}}>
             <View
               style={{
                 width: width * 0.3,
                 height: width * 0.3,
                 backgroundColor: 'gray',
               }}>
-              <Image
-                source={item.image ? {uri: item.image} : null}
-                style={{width: width * 0.3, height: width * 0.3}}
-              />
+                {
+                  item.image ?
+
+
+                  <Image
+                    source={item.image ? {uri: item.image} : null}
+                    style={{width: width * 0.3, height: width * 0.3}}
+                  />
+                  :
+                  <Text style={{fontSize: height * 0.03, textAlign:'center',paddingTop: height * 0.04, color:'white'}}>No Image</Text>
+
+                }
             </View>
             <View
               style={{
@@ -204,7 +213,7 @@ export function ShowDetails({navigation, route}) {
               {item.precaution ? (
                 <ScrollView
                   style={{
-                    height: height * 0.13,
+                    height: 'auto',
                     backgroundColor: 'darkred',
                     borderRadius: 23,
                   }}>
@@ -225,6 +234,7 @@ export function ShowDetails({navigation, route}) {
               ) : (
                 <Text>None</Text>
               )}
+            </View>
             </View>
           </View>
         </View>
