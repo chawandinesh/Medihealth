@@ -70,14 +70,18 @@ export function ShowDetails({navigation, route}) {
             justifyContent: 'center',
             alignItems: 'center',
           }}>
-          <View
+          <ScrollView
+            contentContainerStyle={{
+              alignItems:'center'
+            }}
             style={{
               width: width * 0.76,
               height: height * 0.58,
               backgroundColor: '#fff',
               borderWidth: 2,
               //   justifyContent: 'center',
-              alignItems: 'center',
+              
+             // alignItems: 'center',
             }}>
             <Text
               style={{
@@ -236,7 +240,7 @@ export function ShowDetails({navigation, route}) {
               )}
             </View>
             </View>
-          </View>
+          </ScrollView>
         </View>
       </View>
     </ImageBackground>
